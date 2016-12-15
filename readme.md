@@ -1,4 +1,4 @@
-# Mr Simon C: YAPB _(Yet Another Programming Blog)_
+# About Me
 Hi, I'm Simon Crouch and welcome to my programming blog.
 I love open source, free software and I am completely self-taught in VBA, SQL, AutoHotKey and my favourite: Python.
 
