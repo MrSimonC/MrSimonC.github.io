@@ -1,6 +1,6 @@
 {
-  "name": "Mrsimonc.GitHub.io",
-  "tagline": "",
-  "body": "# SC Programming\r\nHi, I'm Simon Crouch and welcome to my programming blog.\r\nI love open source, free software and I am completely self-taught in VBA, SQL, AutoHotKey and my favourite: Python.\r\n\r\nI work in the NHS, have done for years and will share some tips and software hacks here for all to benefit from.\r\n\r\n## Software Documentation\r\nNeed to make lots of screenshots by just clicking the mouse?  \r\n\r\nIt's amazed me how there's almost no completely free software to help you make IT training documents or even screenshots. \r\n* [See my Software Documentation](https://mrsimonc.github.io/Software-Documentation/) for my free, easy, open source solution using _Greenshot_ and _AutoHotKey_.",
+  "name": "Mr Simon C: Yet Another Programming Blog",
+  "tagline": "Work smarter, not necessarily harder.",
+  "body": "# About Me\r\nHi, I'm Simon Crouch and welcome to my programming blog.\r\nI love open source, free software and I am completely self-taught in VBA, SQL, AutoHotKey and my favourite: Python.\r\n\r\nI work in the NHS, have done for years and will share some tips and software hacks here for all to benefit from.\r\n\r\n## Making Software Documentation _(The free way)_\r\nNeed to make lots of screenshots by just clicking the mouse?  \r\n\r\nIt's amazed me how there's almost no completely free software to help you make IT training documents or even screenshots. \r\n* See my [IT Training Materials solution](https://mrsimonc.github.io/Software-Documentation/) for my free, easy, open source way to make software documentation using _Greenshot_ and _AutoHotKey_.",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
