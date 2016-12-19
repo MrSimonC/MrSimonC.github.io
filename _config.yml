@@ -6,9 +6,3 @@ theme: jekyll-theme-slate
 
 gems:
   - jekyll-mentions
-
-navigation:
-- text: Home
-  url: index.html
-- text: About
-  url: about.html
