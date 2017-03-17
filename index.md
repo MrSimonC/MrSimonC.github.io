@@ -8,3 +8,6 @@ I work in the NHS, have done for years and will share some tips and software hac
 Need to make lots of screenshots by just clicking the mouse?  
 
 It's amazed me how there's almost no completely free software to help you make IT training documents or even screenshots. Click the title for my free, easy, open source way to make software documentation using _Greenshot_ and _AutoHotKey_.
+
+## [EMIS Notes](emis.md)
+If you're supporting or using EMIS, here are some work tips I've made from using it...
