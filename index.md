@@ -11,3 +11,6 @@ It's amazed me how there's almost no completely free software to help you make I
 
 ## [EMIS Notes](emis.md)
 If you're supporting or using EMIS, here are some work tips I've made from using it...
+
+## [Outlook Notes](outlook.md)
+VBA Macros to help you in outlook - e.g. automatically add borders to all images in an email.
