@@ -4,7 +4,7 @@ When taking screenshots on a screen with a large resolution, you might want to r
 
 This can easily be achieved by the use of a free program I've created called Resize. 
 
-Download [Resize](https://github.com/MrSimonC/resize/blob/master/dist/resize.exe) and save to a location of your choice. You can see it's code [here](https://github.com/MrSimonC/resize/). 
+Download [Resize](https://github.com/MrSimonC/resize/blob/master/dist/resize.exe?raw=true) and save to a location of your choice. You can see it's code [here](https://github.com/MrSimonC/resize/). 
 
 In Greenshot, open preferences:
 
