@@ -48,4 +48,3 @@ Tie this macro to a button when in an email:
 5. OK
 
 Now when in an email, simply click your new macro button and all your pictures in the email will have a border.
-si test
