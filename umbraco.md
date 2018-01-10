@@ -1,4 +1,4 @@
-# Umbraco Local installation
+# Umbraco Local Installation
 
 
 1. Go go https://our.umbraco.org/download/ and download the umbraco .zip file
