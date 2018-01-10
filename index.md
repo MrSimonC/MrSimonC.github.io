@@ -14,3 +14,6 @@ If you're supporting or using EMIS, here are some work tips I've made from using
 
 ## [Outlook Notes](outlook.md)
 VBA Macros to help you in outlook - e.g. automatically add borders to all images in an email.
+
+## [Umbraco local installation](umbraco.md)
+Instructions on how to install umbraco locally on your PC since Microsoft Web Matrix is no longer under development. Here we use Microsoft Visual Studio Code and IIS Express.
