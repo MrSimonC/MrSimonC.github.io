@@ -1,13 +1,13 @@
 # Umbraco Local Installation
 
 
-1. Go go https://our.umbraco.org/download/ and download the umbraco .zip file
+1. Go go [https://our.umbraco.org/download/](https://our.umbraco.org/download/) and download the umbraco .zip file
 
 2. Extract the file to a location of your choice
 
 3. Download and install [IIS Express](https://www.microsoft.com/en-us/download/details.aspx?id=48264) (if not already installed in C:\Program Files\IIS or C:\Program Files (x86)\IIS)
 
-4. Download and install Microsoft Visual Studio Code
+4. Download and install [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
 
 5. Within VS Code, go to View, Extensions.
 
