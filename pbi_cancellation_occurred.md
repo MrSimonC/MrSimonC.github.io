@@ -1,7 +1,9 @@
 # Power BI Refresh not working after publishing
+
 "Cancellation occurred when sending or receiving a request" or a more technical "GatewayPipelineErrorCode=DM_GWPipeline_Gateway_SpooledOperationMissing" error occuring when refreshing data from PowerBI website will mask the true problem of either duplicates in an ID column, or for me, dates which aren't valid in the cloud:
 
 ## Fix
+
 I removed all tables and added them back in one by one. The error changed to an OleAut date error in a certain table.
 
 [From this reference](https://msdn.microsoft.com/en-us/library/system.datetime.fromoadate(v=vs.110).aspx) I found any date on or before 30/12/1899 (e.g. 11/12/1089) would cause an error. Replacing/removing these would cause the whole original report to work. In query editor, order your date field to find the problem dates.
