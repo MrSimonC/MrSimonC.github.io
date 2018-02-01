@@ -17,3 +17,6 @@ VBA Macros to help you in outlook - e.g. automatically add borders to all images
 
 ## [Umbraco local installation](umbraco.md)
 Instructions on how to install umbraco locally on your PC since Microsoft Web Matrix is no longer under development. Here we use Microsoft Visual Studio Code and IIS Express.
+
+## [Power BI Refresh not working after publishing](pbi_cancellation_occurred.md)
+When getting "Cancellation occurred when sending or receiving a request" or a more technical "GatewayPipelineErrorCode=DM_GWPipeline_Gateway_SpooledOperationMissing" when refreshing data from PowerBI website, follow this guide to solve the issue.
