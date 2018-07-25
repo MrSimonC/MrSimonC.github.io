@@ -1,0 +1,58 @@
+<h1>Docker For The Win</h1>
+<p>So I'm in to documentation. Yes, I know, a developer (albeit Junior) into documentation? Yes, it must be 2018. The problem, however, is that I've always taken notes down in simple text files. They're quick to load, fast to save, take up minimal space, but have no formatting. Not great when presenting to other people.</p>
+<p>Having written markdown for github (documenting my projects, helping me to get my position as a junior developer), colleagues recommended I write notes in <a href="http://commonmark.org">commonmark</a> markdown. I do now, and I've grown love it. The problem is that Sharepoint doesn't - well our 2015 version doesn't at least.</p>
+<p>Since we're upgrading to Microsoft 365, there is a glimmer of hope that at least Microsoft Teams at least will support markdown - maybe start a wiki there? We'll see.</p>
+<h2>Markdown to clipboard, to html, to sharepoint</h2>
+<p>Currently, to put markdown on our current sharepoint 2015 wiki, I have a Visual Studio Code build <code>tasks.json</code> which looks like this (utilising <code>node markdown-it</code>):</p>
+<pre><code class="language-json">{
+    &quot;tasks&quot;: [
+        {
+            &quot;label&quot;: &quot;Compile Markdown to Clipboard&quot;,
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;command&quot;: &quot;node ${env:APPDATA}\\npm\\node_modules\\markdown-it\\bin\\markdown-it.js '${file}' | clip&quot;,
+            &quot;group&quot;: &quot;build&quot;,
+            &quot;problemMatcher&quot;: []
+        }
+    ]
+}
+</code></pre>
+<p>This enables me to type in markdown, then <code>Ctrl+Shift+B</code>, choose the custom build task which copies html output to my clipboard, then goto sharepoint, &quot;Edit&quot; the page, &quot;Edit Source&quot;, paste in the html, remove the header, then &quot;OK&quot;, and &quot;Save&quot;.<br>
+Even with the custom build task, this is laborious.</p>
+<h2>A better way</h2>
+<p>Sick of being driven mad by the process, in comparison to say <a href="https://pages.github.com/">git hub pages</a>, I thought I'd follow the process if <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">installing github pages locally</a> - or something equivalent.</p>
+<p>Needless to say this didn't go well. I missed the step out (my fault) of <code>gem install bundler</code>, but found this out soon enough. However, running <code>bundle install</code> resulted in <em>&quot;MSYS2 could not be found. Please run 'ridk install'.&quot;</em>. Then, <code>$ ridk install</code> was met with <em>&quot;bash: ridk: command not found&quot;</em>. More problems. After reading, I tried to install msys2 from <a href="http://repo.msys2.org/distrib/x86_64/">here</a> but this would be a separate instance to git bash. Re googling <code>ridk install</code> this suggested I install ruby for windows - which I did but decided this was getting a bit crazy.</p>
+<h3>Why not use docker?</h3>
+<p>I soon came across <a href="https://hub.docker.com/r/jekyll/jekyll/">jekyll official docker image</a>. You can start by pulling the latest docker image with <code>docker pull jekyll/jekyll</code> although this is optional. After lots of trial and error, I recommend <code>Windows Powershell</code> command line - that way commands like <code>${PWD}</code> work out the box.</p>
+<h3>Create Jekyll site</h3>
+<p>Optionally, we can firstly create a jekyll site we can put our markdown files into:</p>
+<ul>
+<li>Open powershell as normal. <em>(Non-administrator privileges is fine)</em></li>
+<li>cd into a new folder e.g. <code>c:\site</code>.</li>
+<li>Optionally start a new jekyll site with:</li>
+</ul>
+<pre><code class="language-powershell">docker run --rm --volume=&quot;${PWD}:/srv/jekyll&quot; -it jekyll/jekyll jekyll new &lt;mySiteName&gt;
+</code></pre>
+<ul>
+<li>site gets created in <code>c:\site\&lt;mySiteName&gt;</code></li>
+</ul>
+<h3>Start our jekyll server</h3>
+<p>We can start our jeykll server which will watch for changes and install all necessary programs all in docker, using the official image.</p>
+<ul>
+<li>cd into your existing jekyll site folder (e.g. <code>c:\site\&lt;mySiteName&gt;</code>)</li>
+<li>Run a jekyll server with</li>
+</ul>
+<pre><code class="language-powershell">docker run --rm --volume=&quot;${PWD}:/srv/jekyll&quot; -p 4000:4000 -it jekyll/jekyll jekyll serve --incremental --force_polling
+</code></pre>
+<ul>
+<li><code>--rm</code> clean up the docker filesystem after the container stops</li>
+<li><code>--volume=&quot;${PWD}:/srv/jekyll&quot;</code> maps the local working directory to the container</li>
+<li><code>-p 4000:4000</code> exposes Jekyll's default port from the container to our local machine. This can be changed to <code>-p &lt;localPort&gt;:4000</code> to point to any port you want.</li>
+<li><code>-it</code> - Allocate a pseudo-tty</li>
+<li><code>--force_polling</code> is a crucial step needed to watch the folder for changes when using docker.</li>
+<li>Open our browser to site <code>http://127.0.0.1:4000</code>
+<ul>
+<li><em>(or <code>http://127.0.0.1:&lt;localPort&gt;</code> if you changed it in the last step)</em></li>
+</ul>
+</li>
+</ul>
+<p>We can now update out markdown files locally in our site folder and see changes straight away in our browser.</p>

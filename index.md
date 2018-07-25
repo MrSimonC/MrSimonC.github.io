@@ -26,3 +26,11 @@ Instructions on how to install umbraco locally on your PC since Microsoft Web Ma
 ## [Power BI Refresh not working after publishing](pbi_cancellation_occurred.md)
 
 When getting "Cancellation occurred when sending or receiving a request" or a more technical "GatewayPipelineErrorCode=DM_GWPipeline_Gateway_SpooledOperationMissing" when refreshing data from PowerBI website, follow this guide to solve the issue.
+
+## [Docker For The Win](Docker_ftw.md)
+
+Creating documentation is important when writing software, but getting Jekyll running easily, use a docker container.
+
+## [Docker tips guide](Docker.md)
+
+Installing and error-solving are the 2 biggest areas for Docker on Windows, so here are some tips to get started.
