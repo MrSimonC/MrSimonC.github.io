@@ -1,9 +1,15 @@
 # About Me
 
 Hi, I'm Simon Crouch and welcome to my programming blog.
-I love open source, free software and I am completely self-taught in VBA, SQL, AutoHotKey and my favourite: Python.
+I love open source, free software and I am completely self-taught in (order of most recent) C#, Python, MySQL, T-SQL, AutoHotKey, Bash and VBA *(VBA? Everyone had to start somewhere, right?)*.
 
-I work in the NHS, have done for years and will share some tips and software hacks here for all to benefit from.
+## Azure Dev Ops
+
+[The things no-one tells you about Azure Dev Ops Wikis...](Azure-Dev-Ops-Wiki.md)
+
+## NHS IT Notes below...
+
+I used to work in the NHS, have done for years and will share some tips and software hacks here for all to benefit from.
 
 ## [Making Software Documentation _(The free way)_](making_software_documentation.md)
 
