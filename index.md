@@ -3,9 +3,10 @@
 Hi, I'm Simon Crouch and welcome to my programming blog.
 I love open source, free software and I am completely self-taught in (order of most recent) C#, Python, MySQL, T-SQL, AutoHotKey, Bash and VBA *(VBA? Everyone had to start somewhere, right?)*.
 
-## Azure Dev Ops
+## Azure
 
-[The things no-one tells you about Azure Dev Ops Wikis...](Azure-Dev-Ops-Wiki.md)
+* [The things no-one tells you about Azure Dev Ops Wikis...](Azure-Dev-Ops-Wiki.md)
+* [Download Azure Functions local.settings.json](azure-functions-local-settings.md)
 
 ## NHS IT Notes below...
 
