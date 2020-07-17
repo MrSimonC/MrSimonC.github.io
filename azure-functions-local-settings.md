@@ -23,3 +23,13 @@ func settings decrypt local.settings.json
 
 func azure storage fetch-connection-string <StorageAccountName>
 ```
+
+For local storage, use:
+
+```json
+"IsEncrypted": false,
+"Values": {
+  "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+  "AzureWebJobsDashboard": "UseDevelopmentStorage=true"
+},
+```
